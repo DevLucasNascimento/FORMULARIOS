@@ -4,6 +4,6 @@
 
 Os formulários foram desenvolvidos nesse editor de código:
 
-´´´
+```
 Visual Studio Code
-´´´
+```
