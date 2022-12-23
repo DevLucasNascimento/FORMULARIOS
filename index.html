@@ -7,24 +7,29 @@
     <title>Formulário de cadastro Tech Store</title>
 
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 
 
 </head>
 <body>
-    <div>
+    <div class="content">
         <h1>Formulário de cadastro Tech Store &#128187; &#128293;</h1>
         <form> 
             <div>
                 <input type="text" placeholder="Digite o seu nome" class="inputs">
-                <span class="span-required">O nome deve ter no mínimo 4 caracteres</span>
+                <span class="span-required">O nome deve ter no mínimo  caracteres</span>
             </div>
             <div>
                 <input type="email" placeholder="Digite seu melhor e-mail" class="inputs">
                 <span class="span-required">Digite o seu melhor e-mail</span>
             </div>
             <div>
+                <input type="number" placeholder="(xx) xxxxx-xxxx" class="inputs">
+                <span class="span-required">Digite seu número de telefone</span>
+            </div>
+            <div>
                 <input type="password" placeholder="Crie uma senha" class="inputs">
-                <span class="span-required">A senha deve ter 10 caracteres.</span>
+                <span class="span-required">A senha deve ter 10 caracteres</span>
             </div>
             <div>
                 <input type="password" placeholder="Repita a senha" class="inputs">
@@ -55,6 +60,7 @@
                     <input type="checkbox" id="whatsApp" value="whatsApp" name="preferencias">
                     <label for="whatsApp">What's App (zap-zap)</label>
                 </div>
+                <button type="submit">Enviar</button>
             </div>
         </form>
     </div>

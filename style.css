@@ -1,0 +1,26 @@
+:root{
+    --color-white: white;
+    --color-red: red;
+    --color-dark1: #141414;
+    --color-dark2: #202020da;
+    --color-purple1: #9333FF;
+    --color-purple2: indigo;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark1);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    background-color: var(--color-dark2);
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 30%;
+    overflow: auto;
+}
