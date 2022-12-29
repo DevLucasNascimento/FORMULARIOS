@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,10 +24,6 @@
                 <span class="span-required">Digite o seu melhor e-mail</span>
             </div>
             <div>
-                <input type="number" placeholder="(xx) xxxxx-xxxx" class="inputs">
-                <span class="span-required">Digite seu número de telefone</span>
-            </div>
-            <div>
                 <input type="password" placeholder="Crie uma senha" class="inputs">
                 <span class="span-required">A senha deve ter 10 caracteres</span>
             </div>
@@ -35,8 +31,8 @@
                 <input type="password" placeholder="Repita a senha" class="inputs">
                 <span class="span-required">Repita a senha criada</span>
             </div>
-
-            <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Me fala um poruco sobre você..."></textarea>
+    
+            <textarea class="inputs" name="descricao" id="descricao" cols="30" rows="10" placeholder="Me fala um poruco sobre você..."></textarea>
             <p>Sexo</p>
             <div class="box-select">
                 <div>
@@ -51,17 +47,20 @@
                     <input type="radio" id="o" value="o" name="sexo">
                     <label for="o">Outro</label>
                 </div>
-                <p>Como deseja receber nossas notificações?</p>
-                <div class="box-select">
+            </div>
+            
+            <p>Como deseja receber nossas notificações?</p>
+            <div class="box-select">
+                <div>
                     <input type="checkbox" id="email" value="email" name="preferencias">
                     <label for="email">E-mail</label>
                 </div>
                 <div>
                     <input type="checkbox" id="whatsApp" value="whatsApp" name="preferencias">
                     <label for="whatsApp">What's App (zap-zap)</label>
-                </div>
-                <button>type="submit">Enviar</button>
+                </div>    
             </div>
+            <button type="submit">Enviar</button>
         </form>
     </div>
 </body>
