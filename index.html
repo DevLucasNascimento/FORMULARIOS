@@ -21,15 +21,15 @@
                 <span class="span-required">O nome deve ter no mínimo 2 caracteres</span>
             </div>
             <div>
-                <input type="email" placeholder="Digite seu melhor e-mail" class="inputs required">
+                <input type="email" placeholder="Digite seu melhor e-mail" class="inputs required" oninput="emailValidate()">
                 <span class="span-required">Digite o seu melhor e-mail</span>
             </div>
             <div>
-                <input type="password" placeholder="Crie uma senha" class="inputs required">
+                <input type="password" placeholder="Crie uma senha" class="inputs required" oninput="mainPasswordValidate()">
                 <span class="span-required">A senha deve ter 10 caracteres</span>
             </div>
             <div>
-                <input type="password" placeholder="Repita a senha" class="inputs required">
+                <input type="password" placeholder="Repita a senha" class="inputs required" oninput="comparePassword()">
                 <span class="span-required">Repita a senha criada</span>
             </div>
     
@@ -67,9 +67,10 @@
 </body>
 
 <script>
-    const form   = document.getElementById('form');
-    const campos = document.querySelectorAll('.required');
-    const span   = document.querySelectorAll('.span-required');
+    const form       = document.getElementById('form');
+    const campos     = document.querySelectorAll('.required');
+    const span       = document.querySelectorAll('.span-required');
+    const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
 
     function setError(index) {
         campos[index].style.border = '2px solid #e63636';
@@ -89,5 +90,40 @@
             removeError(0);
         }
     }
+
+    function emailValidate() {
+        if (emailRegex.test(campos[1].value))
+        {
+            removeError(1);
+        }
+        else 
+        {
+            setError(1);
+        }
+    }
+
+    function mainPasswordValidate () {
+        if (campos[2].value.length < 8)
+        {
+            setError(2);
+        }
+        else
+        {
+            removeError(2);
+            comparePassword();
+        }
+    }
+
+    function comparePassword() {
+        if(campos[2].value == campos[3].value && campos[3].value.length >= 8);
+        {
+            removeError(3);
+        }
+        /*o html nao esta aceitando o "else" nessa linha*/
+        {
+            setError(3);
+        }
+    }
+
 </script>
 </html>
